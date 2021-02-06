@@ -3,6 +3,7 @@
         <link rel="preconnect" href="https://fonts.gstatic.com">
         <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
         <link href="./sheetsio.css" rel="stylesheet" type="text/css" />
+
         <title>SheetsIO - Mark 'Grandy' Bishop</title>
     </head>
     <body>
@@ -10,26 +11,16 @@
             <h1>SheetsIO Json Config Generator</h1>
             <h6>Helper site for <a href="https://github.com/GrandyB/SheetsIO">SheetsIO</a></h6>
             <br />
-            <p>
-                First, enter your full spreadsheet URL into the box below.<br />
-                <h6>Ensure you have the sheet shared as 'anyone with the link can view'.</h6>
-            </p>
-            <div id="sheetUrlDiv">
-                Sheet URL: <input type="text" id="sheetUrlInput" size="70" /><input type="button" id="sheetUrlButton" value="Show" />
-            </div>
-            <p>
-                Enter the name of the worksheet.
-                <h6>The worksheet is the 'tab' within the Google Sheets workbook you wish to point SheetsIO at.</h6>
-            </p>
-            <div id="worksheetNameDiv">
-                Worksheet name: <input type="text" id="worksheetNameInput" size="20" /><input type="button" id="worksheetNameButton" value="Set" />
-            </div>
-            <p>
-                Enter a name for this config.
-                <h6>This will guide the folder structure for the SheetsIO output files to live in.</h6>
-            </p>
-            <div id="projectNameDiv">
-                Local folder name: <input type="text" id="projectNameInput" size="20" /><input type="button" id="projectNameButton" value="Set" />
+            <div id="wizard">
+                <div id="wizard-steps">
+                    <div id="wizard-steps-inner">
+                    </div>
+                </div>
+                <div class="wizard-buttons">
+                    <button id="wizard-button-back">Back</button>
+                    <button id="wizard-button-next">Next</button>
+                    <button id="wizard-button-finish">Finish</button>
+                </div>
             </div>
         </div>
         <div id="preview">
@@ -38,5 +29,8 @@
         </div>
     </body>
 
-    <script type="text/javascript" src="./sheetsio.js"></script>
+    <script type="text/javascript" src="./wizard.js"></script>
+    <script type="text/javascript">
+        Wizard.setup();
+    </script>
 </html>

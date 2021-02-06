@@ -53,3 +53,38 @@ input {
     margin: 0;
     padding: 3px 5px;
 }
+
+#wizard {
+    position: relative;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+#wizard-steps {
+    position: relative;
+    display: block;
+    width: 80%;
+    border: 1px solid #fff;
+    height: 150px;
+    overflow: hidden;
+}
+#wizard-steps-inner {
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    transition: left 1s;
+}
+.wizard-step {
+    width: 100%;
+    flex-shrink: 0;
+    flex-grow: 0;
+}
+.wizard-step div.text, .wizard-step h6 {
+    margin: 5px 0;
+}
